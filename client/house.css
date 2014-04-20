@@ -1,0 +1,36 @@
+#outer {
+	margin-top: 20px;
+}
+
+.thought {
+  height: auto;
+  width: auto;
+  text-align: center;
+  padding: 5px;
+  margin: 2px;
+  background-color: rgba(7, 208, 235, 1);
+  color: white;
+  font-size: 16px;
+  word-wrap: break-word;
+
+}
+
+#total h1{
+	text-align: center;
+}
+
+.selected {
+  background-color: #07A7EB;
+  border: 1px;
+}
+.thought_entry {
+  width: auto;
+}
+
+.container {
+	-webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}

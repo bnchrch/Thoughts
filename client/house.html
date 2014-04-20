@@ -1,0 +1,38 @@
+<head>
+  <title>Thoughts</title>
+</head>
+
+<body>
+<div class='conatiner-fluid'>
+    <div id="outer" class='span6 offset3'>
+      <div id='total'>
+      {{> main_control}}
+      </div>
+
+      {{> leaderboard}}
+    </div>
+  </div>
+</body>
+
+<template name="leaderboard">
+  <div class="leaderboard">
+    {{#each thoughts}}
+      {{> thought}}
+    {{/each}}
+  </div>
+
+</template>
+
+<template name="thought">
+  <div class="thought {{selected}}" onload="gradient()">
+    <span class="name">{{name}}</span>
+  </div>
+</template>
+
+<template name='main_control'>
+<h1>THOUGHTS</h1>
+<input type="text" placeholder="Share a thought or click one to bump it up..." class="span6 thought_entry" />
+
+</template>
+
+
