@@ -11,7 +11,7 @@ gradient = function () {
 
   Template.thought.rendered = function () {
     gradient();
-  }
+  };
 
   Template.leaderboard.thoughts = function () {
     return Thoughts.find({}, {sort: {last_interacted: -1}});
@@ -50,6 +50,7 @@ Template.leaderboard.events({
         if(event.which === 13 && template.find('.thought_entry').value != ''){
             var date = new Date();
             var time_added = date.getTime();
+            var thoughtExisted = Thoughts.findOne({name: template.find('.thought_entry').value});
             Thoughts.insert({name: template.find('.thought_entry').value, last_interacted: time_added});
             template.find('.thought_entry').value = '';
             gradient();
